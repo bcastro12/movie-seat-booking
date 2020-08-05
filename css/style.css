@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #0b0b33;
+    perspective: 1000px;
+    color: #fff;
+}
+
+.screen {
+    height: 90px;
+    width: 200px;
+    background-color: #fff;
+    transform: rotateX(-45deg);
+    box-shadow: 0 0px 20px #fff;
+    position: relative;
+    overflow: hidden;
+}
+.screen img {
+    position: absolute;
+    width: 100%;
+    opacity: 0.3;
+    margin: auto;
+}
+
+.seat {
+    width: 15px;
+    height: 14px;
+    margin: 2px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.seat:hover:not(.unavailable):not(.selected):not(.out) {
+    background-color: rgb(156, 156, 156);
+}
+.seat.selected {
+    background-color: rgb(49, 84, 243);
+}
+.separator {
+    width: 20px;
+}
+.unavailable {
+    cursor: unset;
+    background-color: rgb(83, 83, 83);
+}
+.out {
+    cursor: unset;
+}
+
+.labels {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
